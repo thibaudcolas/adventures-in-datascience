@@ -10,6 +10,7 @@
 ## Courses
 
 - https://www.coursera.org/learn/machine-learning
+- https://www.coursera.org/learn/ml-foundations
 - [Machine Learning Engineer Nanodegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009)
 - [Data Analyst Nanodegree](https://www.udacity.com/course/data-analyst-nanodegree--nd002)
 - [Machine Learning A-Z™: Hands-On Python & R In Data Science](https://www.udemy.com/machinelearning/)
