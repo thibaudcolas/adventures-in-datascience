@@ -4,6 +4,16 @@ https://www.tensorflow.org/get_started/
 
 ## [Getting Started](https://www.tensorflow.org/get_started/get_started) notes
 
+```sh
+# First musings.
+./getting_started.py
+# First real model with training.
+./getting_started_train.py
+# Higher-level API.
+./getting_started_learn.py
+# Combination of high-level and low-level.
+./getting_started_custom.py
+
 Multiple APIs:
 
 - Low-level, TensorFlow Core.
