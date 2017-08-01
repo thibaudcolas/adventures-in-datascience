@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # See https://www.tensorflow.org/get_started/get_started
 
 import os
