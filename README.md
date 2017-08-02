@@ -1,11 +1,17 @@
 # Adventures in Data Science
 
+> My adventures learning more data science and machine learning in particular.
+
 ## Things I want to learn
 
 - [ ] Applied Machine Learning with Python
 - [ ] Basics of Machine Learning with R
 - [ ] Neural networks theory
 - [ ] Storytelling with data
+
+## Things I'm actually learning
+
+- [ ] [TensorFlow basics](tensorflow)
 
 ## Courses
 
