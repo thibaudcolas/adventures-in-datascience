@@ -92,3 +92,5 @@ core/static/js
 core/static/css
 core/svg.html
 core/static
+
+MNIST_data
