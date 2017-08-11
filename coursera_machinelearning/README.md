@@ -24,3 +24,25 @@ Types of machine learning:
 - Unsupervised learning
 - (Reinforcement learning)
 - (Recommender systems)
+
+### Supervised Learning
+
+Example: house prices, "right answers" are given
+
+"Fit a model in the data"
+
+- **Regression** problem: Continuous value output
+- **Classification** problem: Discrete valued output
+
+Feature = attribute
+
+### Unsupervised Learning
+
+Structure of the data - clusters
+
+Applications of clustering algorithms:
+
+- Computing clusters organisation
+- Market segmentation
+- Social network analysis
+- Astronomical data analysis
