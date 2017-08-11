@@ -46,3 +46,81 @@ Applications of clustering algorithms:
 - Market segmentation
 - Social network analysis
 - Astronomical data analysis
+
+### Model Representation
+
+Linear regression!
+
+Housing prices: Price (1000s $), Size (feet squared)
+
+Training set
+
+Notation:
+
+- **m** = Number of training examples
+- **x**'s = "input" variable / features
+- **y**'s = "output" variable / "target" variable
+- **(x, y)** = One training example
+- **(x(i), y(i))** = i-th training example
+
+"Univariate" linear regression
+
+> learn a function h : X → Y so that h(x) is a “good” predictor for the corresponding value of y. For historical reasons, this function h is called a hypothesis.
+
+```
+          ┌─────────────────┐
+          │   Training set   │
+          │                  │
+          └─────────────────┘
+                   │
+                   │
+                   ▼
+          ┌─────────────────┐
+          │    Learning      │
+          │    algorithm     │
+          └─────────────────┘
+                   │
+                   │
+      x            ▼        predicted y
+                 ┌───┐
+(living area ───▶│ h │───▶  (predicted
+  of house)      └───┘    price of house)
+```
+
+### Cost function
+
+"Minimise the difference between the hypotheses and the actual value"
+
+Squared error function: Average difference (actually a fancier version of an average) of all the results of the hypothesis with inputs from x's and the actual output y's.
+
+Works well for most problems. Most common (for linear regression problems). There are other cost functions.
+
+Contour plots - charts concentric circles of equal values for a given set of variables
+
+### Gradient descent
+
+Very common algorithm. Not just linear regression.
+
+- Start with some θ0 and θ1
+- Keep changing θ0, 01 to reduce J(θ0, θ1) until we hopefully end up at a minimum
+
+Local minimums / local optimums! Common starting value: 0, 0
+
+![Gradient descent illustration](assets/function-gradient-descent.png)
+
+Follow the derivative (tangent line) of the cost function, down slope.
+
+Simultaneous updated of both θ0 and θ1 (interdependent)
+
+Alpha gradient descent step:
+
+- Too small, gradient descent too slow
+- Too large, overshoot the minimum, fail to converge, *or even diverge*.
+
+Eventually converges regardless of learning rate alpha, because derivative tends to 0, thus taking smaller steps.
+
+Convex function (bowl shaped): no local optima, just one global optimum.
+
+Quadratic gradient descent:
+
+![](assets/quadratic-gradient-descent.png)
