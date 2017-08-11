@@ -12,6 +12,7 @@
 ## Things I'm actually learning
 
 - [ ] [TensorFlow basics](tensorflow)
+- [ ] [Coursera Machine Learning course](coursera_machinelearning)
 
 ## Courses
 
