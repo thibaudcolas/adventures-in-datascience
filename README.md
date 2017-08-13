@@ -12,12 +12,17 @@
 ## Things I'm actually learning
 
 - [ ] [TensorFlow basics](tensorflow)
+  - [x] Getting Started
+  - [ ] MNISFT For ML Beginners
 - [ ] [Coursera Machine Learning course](coursera_machinelearning)
+  - [x] Week 1
+  - [ ] Week 2
 
 ## Courses
 
 - https://www.coursera.org/learn/machine-learning
 - https://www.coursera.org/learn/ml-foundations
+- https://www.coursera.org/specializations/deep-learning
 - [Machine Learning Engineer Nanodegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009)
 - [Data Analyst Nanodegree](https://www.udacity.com/course/data-analyst-nanodegree--nd002)
 - [Machine Learning A-Z™: Hands-On Python & R In Data Science](https://www.udemy.com/machinelearning/)

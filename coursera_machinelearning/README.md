@@ -2,7 +2,7 @@
 
 ## Week 1
 
-### What is Machine Learning?
+### What is Machine Learning
 
 > The field of study that gives computers the ability to learn without being explicitly programmed.
 > – Arthur Samuel
@@ -124,3 +124,13 @@ Convex function (bowl shaped): no local optima, just one global optimum.
 Quadratic gradient descent:
 
 ![](assets/quadratic-gradient-descent.png)
+
+## Matrices and Vectors
+
+> Matrix: Rectangular array of numbers
+
+Dimension of matrix: number of rows x number of columns
+
+> Vector: Matrix with n x 1 dimension
+
+Identity matrix, denoted I or ][n*m
