@@ -134,3 +134,7 @@ Dimension of matrix: number of rows x number of columns
 > Vector: Matrix with n x 1 dimension
 
 Identity matrix, denoted I or ][n*m
+
+## Week 2
+
+Install Octave: `brew install octave`.
