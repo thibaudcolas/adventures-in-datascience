@@ -39,6 +39,7 @@
 
 - https://github.com/josephmisiti/awesome-machine-learning
 - https://github.com/jtoy/awesome-tensorflow
+- https://github.com/vahidk/EffectiveTensorflow
 - https://github.com/bulutyazilim/awesome-datascience
 
 ## TODO

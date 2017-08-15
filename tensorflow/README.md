@@ -1,7 +1,5 @@
 # [TensorFlow](https://www.tensorflow.org/)
 
-https://www.tensorflow.org/get_started/
-
 ## [Getting Started](https://www.tensorflow.org/get_started/get_started) notes
 
 ```sh
