@@ -137,4 +137,46 @@ Identity matrix, denoted I or ][n*m
 
 ## Week 2
 
-Install Octave: `brew install octave`.
+### Octave
+
+- Install: ``.
+- Start: `octave`
+
+```sh
+# Install
+brew install octave
+# Start
+octave
+# Help
+help <func_name>
+```
+
+### Multivariate Linear Regression
+
+Notation:
+
+- `n` = number of features
+- `x(i)` = input (features) of i-th training example
+- `x(i)j` = value of feature j in i-th training example
+
+Hypothesis, multivariate edition:
+
+```python
+hθ(x) = θ0 + 01x1 + θ2x2 + θ3x3 + θ4x4
+# Any number of variables, with x0 = 1.
+hθ(x) = θ0x0 + 01x1 + ... + θnxn
+```
+
+#### Feature scaling
+
+If features use different scales, gradient descent will be very slow (lots of steps). The countour graph is very skewed.
+
+Put all features on the same scale - approximate value range: -1 <= xi <= 1 range (not smaller, not bigger). Rule of thumb: -3 – 3, -1/3 – 1/3 are ok
+
+Mean normalisation: Give features a 0 mean by reducing all feature values by the prev mean (in training set).
+
+```python
+# u1 = avg
+# s1 = sd, or range
+x1 <- (x1 - u1) / s1
+```
