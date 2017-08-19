@@ -167,7 +167,7 @@ hθ(x) = θ0 + 01x1 + θ2x2 + θ3x3 + θ4x4
 hθ(x) = θ0x0 + 01x1 + ... + θnxn
 ```
 
-#### Feature scaling
+#### Gradient descent – Feature scaling
 
 If features use different scales, gradient descent will be very slow (lots of steps). The countour graph is very skewed.
 
@@ -180,3 +180,49 @@ Mean normalisation: Give features a 0 mean by reducing all feature values by the
 # s1 = sd, or range
 x1 <- (x1 - u1) / s1
 ```
+
+#### Gradient descent – Learning rate
+
+Plot J(θ) cost function per number of iterations. J(θ) should decrease after every iteration.
+
+See after how many iterations the gradient descent has converged.
+
+Gradient descent not working - most common reason is too high learning rate α.
+
+- For sufficiently small α, J(θ) should decrease on every iteration.
+- But if α is too small, gradient descent can be slow to converge.
+- Try α: 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1 (steps of 3x)
+
+#### Features and polynomial regression
+
+Housing prices prediction: hθ(x) = θ0 + θ1 * frontage + θ2 * depth, or hθ(x) = θ0 + θ1 * area (frontage * depth)
+
+Instinct for the shape of the data based on the shape of different regressions - quadratic, cubic, square root. Use feature scaling accordingly.
+
+- Combine multiple features into one.
+
+### Computing parameters analytically
+
+#### Normal equation
+
+> Method to solve for θ analytically
+
+Gradient descent:
+
+- Need to choose α
+- Needs many iterations.
+- Works well even when n (nb features) is large
+
+Normal equation:
+
+- No need to choose α.
+- Don't need to iterate
+- Need to compute O(n3).
+- Slow if n is very large.
+
+Rule of thumb: less than 1000 features = normal equation
+
+θ = (X^T*X)^-1 * X^T * y
+
+X = attributes matrix padded with 1 of size m * (n + 1)
+y = m-dimensional vector
