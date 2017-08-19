@@ -226,3 +226,12 @@ Rule of thumb: less than 1000 features = normal equation
 
 X = attributes matrix padded with 1 of size m * (n + 1)
 y = m-dimensional vector
+
+#### Non-invertible matrix in normal equation
+
+- Redundant features
+- Too many features
+
+Delete some features, or use regularization
+
+### Octave Tutorial
