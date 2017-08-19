@@ -235,3 +235,277 @@ y = m-dimensional vector
 Delete some features, or use regularization
 
 ### Octave Tutorial
+
+#### Basics
+
+```octave
+# Change the prompt
+PS1('>> ');
+# Variable.
+a = pi;
+# Display a variable.
+disp(a);
+# C-style decimals printing.
+disp(sprintf('2 decimals: %0.2f', a));
+# Change string formatting to "long" numbers.
+format long
+# Help command
+help <func>
+```
+
+#### Matrices
+
+```octave
+A = [1 2; 3 4; 5 6];
+# Or:
+A = [1 2;
+3 4;
+5 6]
+# Vector, 1*3:
+v = [1 2 3]
+# Vector, 3*1:
+v = [1; 2; 3]
+# Row vector: step between two ints.
+v = 1:0.1:2
+# Generate a matrix of ones:
+ones(2, 3)
+# Same with 2s:
+C = 2 * ones(2, 3)
+# Vector of ones
+w = ones(1, 3)
+# Vector of zeroes
+w = zeros(1, 3)
+# Random matrix, uniform distribution between 0 and 1.
+w = rand(1, 3)
+# Gaussian distribution of random numbers (cool!)
+w = randn(1, 3)
+# Plotting!
+w = -6 + sqrt(10) * (randn(1, 10000))
+hist(w);
+hist(w, 50);
+# Identity matrix
+eye(4)
+```
+
+#### Manipulating data
+
+```octave
+A = [1 2; 3 4; 5 6];
+# Size matrix
+sz = size(A)
+# Nb rows
+size(A, 1)
+# Nb columns
+size(A, 2)
+v = [1 2 3 4]
+# Longer dimension (meant for vectors)
+length(v)
+```
+
+#### Directory structure
+
+```octave
+pwd
+ls
+cd
+```
+
+#### Load data
+
+```octave
+# Load from file
+load('featuresX.dat')
+load('priceY.dat')
+# Show variables available
+who
+# Remove a variable
+clear <variable>
+# Slice vector to first 10
+v = priceY(1:10);
+# Save data in file.
+save hello.mat v;
+```
+
+#### Matrix access and assignment
+
+```octave
+A = [1 2; 3 4; 5 6];
+# Access given element index.
+A(3, 2)
+# Everything in second row.
+A(2, :)
+# All elements of A in index 1 and 3, all columns.
+A([1 3], :)
+# Assignment to second column.
+A(:,2) = [10; 11; 12]
+# Append another column vector at the end of A.
+A = [A, [100; 101; 102]]
+# All elts of A into a single column vector
+A(:)
+# Matrix concatenation
+A = [1 2; 3 4; 5 6];
+B = [11 12; 13 14; 15 16];
+# Concatenate as more columns, to the right.
+C = [A B]
+# Concatenate as more rows, below
+C = [A; B]
+```
+
+#### Computing on data
+
+```octave
+A = [1 2; 3 4; 5 6];
+B = [11 12; 13 14; 15 16];
+C = [1 1; 2 2];
+# Multiply complete matrices
+A * C
+# Multiply by element. "." is element-wise operation
+A .* B
+# Element-wise squaring
+A .^ 2
+# Element-wise division
+v = [1; 2; 3];
+1 ./ v
+# Other elt-wise computations
+log(v)
+exp(v)
+abs(v)
+# Negative
+-v
+# Add one to each elt - add vector of ones to v.
+v + ones(length(v), 1)
+# Or
+v + 1
+# Transpose.
+A'
+(A')'
+# Other useful funcs.
+a = [1 15 2 0.5]
+# Returns max value and index.
+val = max(a)
+# Column-wise maximum.
+max(A)
+# Elt-wise comparison
+a < 3
+find(a < 3)
+# Magic squares to the rescue.
+A = magic(3)
+[r,c] = find(A >= 7)
+# Sum, prod, floor
+sum(a)
+prod(a)
+floor(a)
+ceil(a)
+# Column-wise maximum.
+max(A, [], 1)
+# Row-wise maximum.
+max(A, [], 2)
+# In entire matrix.
+max(max(A))
+max(A(:))
+# More sums, column-wise, row-wise.
+A = magic(9)
+sum(A, 1)
+sum(A, 2)
+# Identity matrix sum.
+A .* eye(9)
+# Flip matrices.
+flipud(eye(9))
+# Invert matrix (pseudo-inverse).
+pinv(A)
+```
+
+#### Plotting data
+
+![Example of an octave-generated plot](assets/octave-plot-example.png)
+
+```octave
+t = [0: 0.01: 0.98];
+y1 = sin(2*pi*4*t);
+plot(t, y1);
+y2 = cos(2*pi*4*t);
+plot(t, y2);
+# Have both plots at once.
+hold on;
+plot(t, y2, 'r');
+plot(t, y1, 'b');
+xlabel('time');
+ylabel('value');
+legend('sin', 'cos');
+title('my plot');
+# Multiple figures.
+close
+figure(1); 
+plot(t, y1);
+figure(2); 
+plot(t, y2);
+# Subplot!
+subplot(1, 2, 1);
+plot(t, y1);
+subplot(1, 2, 2);
+plot(t, y2);
+axis([0.5 1 -1 1]);
+# Weird color plotting of numbers!
+clf;
+A = magic(5);
+imagesc(A);
+imagesc(A), colorbar, colormap gray;
+```
+
+#### Control flow – for, while, if
+
+```octave
+v = zeros(1, 10);
+# For
+for i = 1:10,
+    v(i) = 2^i;
+end;
+indices = 1:10;
+# While.
+i = 1;
+while i <= 5,
+    v(i) = 100;
+    i = i + 1;
+end;
+# While, break, if.
+i = 1;
+while true,
+    v(i) = 999;
+    i = i + 1;
+    if i == 6,
+        break;
+    end;
+end;
+# If.
+v(1) = 2;
+if v(1) == 1,
+    disp('The value is one');
+elseif v(1) == 2,
+    disp('The value is two');
+else
+    disp('The value is not one or two');
+end;
+# Functions!
+# In squareThisNumber.m
+function y = squareThisNumber(x)
+y = x^2;
+# Manage search path.
+addpath('my/path')
+# In squareAndCubeThisNumber.m
+function [y1, y2] = squareAndCubeThisNumber(x)
+y1 = x^2;
+y2 = x^3;
+# Destructuring two value return
+[a,b] = squareAndCubeThisNumber(5);
+```
+
+```octave
+X = [1 1; 1 2; 1 3];
+y = [1; 2; 3];
+theta=[0;1];
+j = costFunctionJ(X, y, theta);
+```
+
+#### Vectorization
+
+```octave
