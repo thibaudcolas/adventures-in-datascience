@@ -508,4 +508,6 @@ j = costFunctionJ(X, y, theta);
 
 #### Vectorization
 
-```octave
+Vectorized vs unvectorized implementation.
+
+Vectorised implementation of gradient descent
