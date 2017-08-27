@@ -604,3 +604,5 @@ Addressing overfitting:
 - Regularization
   - Keep all the features, but reduce the magnitude of parameters θj.
   - Regularization works well when we have a lot of slightly useful features.
+
+Lambda: regularization parameter. Determines how much the costs of our theta parameters are inflated
