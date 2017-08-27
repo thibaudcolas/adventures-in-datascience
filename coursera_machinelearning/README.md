@@ -606,3 +606,7 @@ Addressing overfitting:
   - Regularization works well when we have a lot of slightly useful features.
 
 Lambda: regularization parameter. Determines how much the costs of our theta parameters are inflated
+
+## Week 4
+
+Neural networks!
