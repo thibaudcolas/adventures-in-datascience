@@ -139,7 +139,7 @@ Identity matrix, denoted I or ][n*m
 
 ### Octave
 
-- Install: ``.
+- Install: `brew install octave`.
 - Start: `octave`
 
 ```sh
@@ -511,3 +511,96 @@ j = costFunctionJ(X, y, theta);
 Vectorized vs unvectorized implementation.
 
 Vectorised implementation of gradient descent
+
+## Week 3
+
+### Classification
+
+Denote classes with numbers
+
+- 0: Negative class
+- 1: Positive class
+
+Somewhat arbitrary, but 0 usually conveys the absence of something.
+
+With linear regression, threshold classifier at hθ(x) at 0.5. Bad idea.
+
+Logistic regression to the rescue! `0 <= hθ(x) <= 1`.
+
+### Hypothesis representation
+
+Classifier needs to output values that are `0 <= hθ(x) <= 1`.
+
+```
+# Logistic regression:
+hθ(x) = g(θ^T * x)
+# With g:
+g(z) = 1 / (1 + e^-z)
+
+# Or:
+hθ(x) =  1 / (1 + e^(-θ^T * x))
+```
+
+Sigmoid function / Logistic function
+
+Logistic function asymptotes at 0 and 1
+
+![](assets/sigmoid-function.png)
+
+### Interpretation
+
+hθ(x) = estimated probability that y = 1 on input x. Probability that our prediction is 0 is just the complement of our probability that it is 1.
+
+Decision Boundary = Set of points where hθ(x) = 0.5
+
+Property of the hypothesis / parameters, not of the training set
+
+Doesn't need to be linear, and could be a function that describes a circle (e.g. z=θ0+θ1x21+θ2x22) or any shape to fit our data. Higher-order polynomials for more complex decision boundaries.
+
+### Cost function for logistic regression models
+
+Non-convex cost function (local optima).
+
+Use a different calculation in the cost function depending on y = 0 or y = 1
+
+Can be rewritten as `Cost(hθ(x), y) = - y * log(hθ(x)) - (1 - y) * log(1 - hθ(x))` to have a single equation
+
+### Optimization algorithms
+
+- Gradient descent
+- Conjugate gradient
+- BFGS
+- L-BFGS
+
+Advantages of the last 3:
+
+- No need to manually pick α
+- Often faster than gradient descent
+
+Disadvantages:
+
+- More complex
+
+### Multi-class classification
+
+One vs all! (one vs rest)
+
+Email foldering/tagging: Work, Friends, Family, Hobby
+
+- Train a logistic regression classifier hθ(x) for each class￼ to predict the probability that ￼y = i.
+- To make a prediction on a new x, pick the class ￼that maximizes hθ(x).
+
+### Regularization / solving overfitting
+
+- Underfitting / high bias (strong pre-conception)
+- "Just right"
+- Overfitting / high variance (can fit almost any function)
+
+Addressing overfitting:
+
+- Reduce number of features
+  - Manually select wich features to keep.
+  - Use a model selection algorithm (studied later in the course).
+- Regularization
+  - Keep all the features, but reduce the magnitude of parameters θj.
+  - Regularization works well when we have a lot of slightly useful features.
