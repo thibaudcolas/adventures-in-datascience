@@ -610,3 +610,25 @@ Lambda: regularization parameter. Determines how much the costs of our theta par
 ## Week 4
 
 Neural networks!
+
+- Neuron, input values (dendrites), output value (axon)
+- Bias unit (x1)
+
+Sigmoid (logistic) activation function
+
+Weights / parameters
+
+Neural networks: layers.
+
+1. Input layer
+2. Hidden layer
+3. Output layer
+
+Terminology:
+
+- ai^(j): activation of unit i in layer j
+- θ^(j): matrix of weights controlling function mapping from layer j to layer j+1
+
+If network has sj units in layer j and sj+1 units in layer j+1, then Θ(j) will be of dimension sj+1×(sj+1).
+
+Forward propagation
