@@ -632,3 +632,35 @@ Terminology:
 If network has sj units in layer j and sj+1 units in layer j+1, then Θ(j) will be of dimension sj+1×(sj+1).
 
 Forward propagation
+
+## Week 5
+
+### Cost function
+
+Neural networks for classification
+
+L = total number of layers in network
+S.l = number of units (not counting bias unit) in layer l
+
+Binary classification
+
+- y = 0 or 1
+- S.L = 1
+- K = 1
+
+Multi-class classification (K classes)
+
+K output units
+
+Cost function: generalisation of the one for logistic regression
+
+Sum over the K output units, plus regularisation term
+
+### Backpropagation algorithm
+
+- Unrolling parameters
+- Gradient checking
+- Random initialisation
+- Symmetry breaking
+
+### Autonomous driving
