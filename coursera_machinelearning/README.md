@@ -663,4 +663,24 @@ Sum over the K output units, plus regularisation term
 - Random initialisation
 - Symmetry breaking
 
-### Autonomous driving
+## Week 6
+
+### Evaluating a hypothesis
+
+Evaluating overfitting
+
+- Split available data in two portions
+- Training set (70%)
+- Test set (30%)
+
+### Bias vs variance
+
+Overfitting or underfitting. Important to understand which of the two is happening.
+
+We need to distinguish whether bias or variance is the problem contributing to bad predictions.
+- High bias is underfitting and high variance is overfitting. Ideally, we need to find a golden mean between these two.
+- The training error will tend to decrease as we increase the degree d of the polynomial.
+
+At the same time, the cross validation error will tend to decrease as we increase d up to a point, and then it will increase as d is increased, forming a convex curve.
+
+![](assets/fitting.png)
