@@ -683,4 +683,38 @@ We need to distinguish whether bias or variance is the problem contributing to b
 
 At the same time, the cross validation error will tend to decrease as we increase d up to a point, and then it will increase as d is increased, forming a convex curve.
 
-![](assets/fitting.png)
+### Fitting
+
+![fitting](assets/fitting.png)
+
+### Learning curves
+
+![learning-curves](assets/learning-curves-bias.png)
+
+![learning-curves](assets/learning-curves-variance.png)
+
+### Deciding what to do
+
+Our decision process can be broken down as follows:
+
+- Getting more training examples: Fixes high variance
+- Trying smaller sets of features: Fixes high variance
+- Adding features: Fixes high bias
+- Adding polynomial features: Fixes high bias
+- Decreasing λ: Fixes high bias
+- Increasing λ: Fixes high variance.
+
+### Neural networks and overfitting
+
+- Small neural network (fewer parameters, more prone to underfitting). Computationally cheaper.
+- Large neural network (more parameters, more prone to overfitting). Computationally more expensive.
+
+Use regularization (λ) to address overfitting.
+
+Number of hidden layers – 1 is reasonable default. Find good training, test, cross-validation split, make NN with 1, 2, 3 hidden layers and use cross-validation result to decide.
+
+----
+
+- Lower-order polynomials (low model complexity) have high bias and low variance. In this case, the model fits poorly consistently.
+- Higher-order polynomials (high model complexity) fit the training data extremely well and the test data extremely poorly. These have low bias on the training data, but very high variance.
+- In reality, we would want to choose a model somewhere in between, that can generalize well but also fits the data reasonably well.
