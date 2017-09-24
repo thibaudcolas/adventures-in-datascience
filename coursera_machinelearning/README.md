@@ -663,6 +663,25 @@ Sum over the K output units, plus regularisation term
 - Random initialisation
 - Symmetry breaking
 
+### Putting it all together
+
+#### Neural network architecture
+
+- Number of input units = number of features
+- Number of output units = number of classes (in multi-class classification)
+- Hidden layer: 1 is reasonable default
+- More than 1 hidden layer - same number of units in each layer
+- The more hidden units the better, but more computationally expensive
+
+#### Training a neural network
+
+- Randomly initialize the weights
+- Implement forward propagation to get hTheta(x^{(i)}) for any x^{(i)}
+- Implement the cost function
+- Implement backpropagation to compute partial derivatives
+- Use gradient checking to confirm that your backpropagation works. Then disable gradient checking.
+- Use gradient descent or a built-in optimization function to minimize the cost function with the weights in theta.
+
 ## Week 6
 
 ### Evaluating a hypothesis
@@ -718,3 +737,8 @@ Number of hidden layers – 1 is reasonable default. Find good training, test, 
 - Lower-order polynomials (low model complexity) have high bias and low variance. In this case, the model fits poorly consistently.
 - Higher-order polynomials (high model complexity) fit the training data extremely well and the test data extremely poorly. These have low bias on the training data, but very high variance.
 - In reality, we would want to choose a model somewhere in between, that can generalize well but also fits the data reasonably well.
+
+### Trading off precision and recall
+
+- Precision = true positives / no. of predicted positives
+- Recall = true positives / no. of actual positives
