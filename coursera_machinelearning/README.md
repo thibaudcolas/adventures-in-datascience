@@ -742,3 +742,17 @@ Number of hidden layers – 1 is reasonable default. Find good training, test, 
 
 - Precision = true positives / no. of predicted positives
 - Recall = true positives / no. of actual positives
+
+## Week 7
+
+### Support Vector Machines
+
+Large-margin classifiers
+
+C = 1 / λ
+
+- Large C: Lower bias, high variance (overfitting)
+- Small C: Higher bias, low variance (underfitting)
+
+- Large σ^2: Features f.i vary more smoothly, higher bias, lower variance
+- Small σ^2: Features f.i vary less smoothly, lower bias, higher variance
