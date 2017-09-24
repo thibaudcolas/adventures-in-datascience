@@ -829,3 +829,49 @@ Extract input vectors from training set (unlabeled)
 Bad use of PCA: reduce overfitting
 
 ## Week 9
+
+### Anomaly detection
+
+Given a dataset of "normal", non-anomalous examples, is a new point x anomalous?
+
+Model of probability of p(x). If p(xtest) < epsylon, flag as anomaly.
+
+Usage: fraud detection
+
+Gaussian distribution
+
+Possible evaluation metrics:
+
+- True positive, false positive, true negative, false negative
+- Precision/Recall
+- F1-score
+
+Can also use cross-validation set to choose parameter epsylon.
+
+#### Anomaly detection vs supervised learning
+
+|Anomaly detection|Supervised learning|
+|-----------------|-------------------|
+|Very small number of positive examples (y = 1) (0-20 is common)|Large number of positive and negative examples|
+|Large number of negative examples (y = 0)||
+|Many different "types" of anomalies. Hard for any algorithm to learn from positive examples what the anomalies look like; future anomalies may look nothing like any of the anomalous examples we've seen so far.|Enough positive examples for algorithm to get a sense of what positive examples are like, future positive examples likely to be similar to ones in training set.|
+
+#### Choosing what features to use
+
+Non-gaussian features: transform the features to make them gaussian-shaped
+
+Error analysis for anomaly detection. Want:
+
+- p(x) large for normal examples x.
+- p(x) small for anomalous examples x.
+
+Most common problem: p(x) is comparable (say, both large) for normal and anomalous examples.
+
+Create features that combine other features, eg. anomalous server = big CPU load, low network. Feature = CPU / network.
+
+### Recommender systems
+
+- Content based recommendations
+- Collaborative filtering
+
+Low rank matrix factorisation
