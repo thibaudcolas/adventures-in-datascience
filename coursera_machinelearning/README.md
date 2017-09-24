@@ -816,3 +816,4 @@ Eigenvectors of covariance matrix
 
 Choose k (number of principal components) so that 99% (or X%) of variance is retained.
 
+For most datasets, data is very correlated and it's possible to aim for conservation of 99% of the variance.
