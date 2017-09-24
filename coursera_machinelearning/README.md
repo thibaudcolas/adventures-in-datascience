@@ -817,3 +817,15 @@ Eigenvectors of covariance matrix
 Choose k (number of principal components) so that 99% (or X%) of variance is retained.
 
 For most datasets, data is very correlated and it's possible to aim for conservation of 99% of the variance.
+
+#### Supervised learning algorithm speedup
+
+One of the most common uses of PCA, when dataset is high-dimensional (10000?).
+
+Usage: computer vision, 100x100 pixels image, 10'0000 feature vectors
+
+Extract input vectors from training set (unlabeled)
+
+Bad use of PCA: reduce overfitting
+
+## Week 9
