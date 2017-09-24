@@ -756,3 +756,63 @@ C = 1 / λ
 
 - Large σ^2: Features f.i vary more smoothly, higher bias, lower variance
 - Small σ^2: Features f.i vary less smoothly, lower bias, higher variance
+
+## Week 8
+
+### Unsupervised learning - Clustering
+
+Unsupervised learning: unlabeled data, "find some structure". Clusters of points: clustering. There are other types.
+
+Clustering applications: market segmentation, social network analysis, network optimisation, astronomical data analysis
+
+#### K-means
+
+By far the most popular / common clustering algorithm
+
+Randomly initialise cluster centroids (one per cluster)
+
+Steps (loop):
+
+- Cluster centroid assignment
+- Move cluster centroids to average of location of points
+
+Input:
+
+- K = number of clusters
+- Training set {x(1), x(2), ..., x(m)} – no y labels
+
+Optimisation objective: reduce output of cost/distortion function
+
+Random initialisation: pick K training examples and assign the centroids to those points.
+
+Local optima exist. Run random initialisation multiple times, pick the one with lowest cost function output.
+
+#### Choosing the value of K
+
+Elbow method as a way to automate it. Still mostly manual. Depends on actual reasoning for the clustering.
+
+### Data compression (dimensionality reduction)
+
+Reduce the number of dimensions to reduce:
+
+- Redundancy
+- Computation cost/time
+- Disk space, memory usage
+
+#### For data visualisation
+
+Find a lower-dimensional sub-pane onto which to project the data
+
+### Principal Component Analysis (PCA)
+
+- Reduce from 2-dimension to 1-dimension: Find a direction (vector) onto which to project the data so as to minimize the projection error.
+- Reduce from n-dimension to k-dimension: Find k vectors onto which to project the data so as to minimize the projection error. 
+
+Preprocessing: mean normalisation, and optionally feature scaling
+
+Eigenvectors of covariance matrix
+
+### Applying PCA
+
+Choose k (number of principal components) so that 99% (or X%) of variance is retained.
+
