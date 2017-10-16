@@ -875,3 +875,19 @@ Create features that combine other features, eg. anomalous server = big CPU load
 - Collaborative filtering
 
 Low rank matrix factorisation
+
+## Week 10
+
+### Large-scale machine learning
+
+Bigger and bigger amount of data. "It's not who has the best algorithm that wins. It's who has the most data."
+
+### Stochastic gradient descent
+
+- Batch gradient descent: going through all of the training examples in every single iteration
+- Stochastic gradient descent: looking at a single example per iteration
+
+1. Randomly shuffle training examples
+2. Compute inner loop - 1 to 10 times
+
+Reduce learning rate as gradient descent converges so it reaches the global minimum, instead of wandering around it.
