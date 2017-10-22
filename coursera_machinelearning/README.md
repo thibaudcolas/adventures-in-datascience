@@ -1,5 +1,18 @@
 # [Coursera Machine Learning course](https://www.coursera.org/learn/machine-learning) by Andrew Ng
 
+**Summary:**
+
+- Supervised learning
+    - Linear regression, logistic regression, neural networks, SVMs
+    - For labeled data (x(i), y(i))
+- Unsupervised learning
+    - K-means clustering, PCA, Anomaly detection
+    - Unlabeled data
+- Special applications / topics
+    - Recommender systems, large scale machine learing, sliding windows
+- Advice on building a machine learning system
+    - Bias/variance, regularization; deciding what to work on next: evaluation of learning algorithms, learning curves, error analysis, ceiling analysis.
+
 ## Week 1
 
 ### What is Machine Learning
@@ -964,16 +977,3 @@ What part of the pipeline is worth time to spend on improving?
 - Stage by stage, assume 100% accuracy of the previous stage (giving 100% correct input), to get accuracy of the rest of the system
 
 Now know the upside potential of improving each of the components.
-
-## Summary
-
-- Supervised learning
-    - Linear regression, logistic regression, neural networks, SVMs
-    - For labeled data (x(i), y(i))
-- Unsupervised learning
-    - K-means clustering, PCA, Anomaly detection
-    - Unlabeled data
-- Special applications / topics
-    - Recommender systems, large scale machine learing, sliding windows
-- Advice on building a machine learning system
-    - Bias/variance, regularization; deciding what to work on next: evaluation of learning algorithms, learning curves, error analysis, ceiling analysis.
