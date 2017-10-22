@@ -1,4 +1,4 @@
-# [Coursera Machine Learning course](https://www.coursera.org/learn/machine-learning)
+# [Coursera Machine Learning course](https://www.coursera.org/learn/machine-learning) by Andrew Ng
 
 ## Week 1
 
@@ -891,3 +891,89 @@ Bigger and bigger amount of data. "It's not who has the best algorithm that wins
 2. Compute inner loop - 1 to 10 times
 
 Reduce learning rate as gradient descent converges so it reaches the global minimum, instead of wandering around it.
+
+## Week 11
+
+Photo OCR (Optical Character Recognition) pipeline:
+
+- Image -> Text detection -> Character segmentation -> Character recognition
+
+> "Machine learning pipeline": A system with many stages / components, several of which may use machine learning.
+
+### Sliding window detection
+
+Pedestrian detection – easier because the ratio is fixed (width to height of pedestrians)
+
+- Shift patch by a given step size, left to right, row by row
+- Use larger and larger patches (resizing them down to the set width and height)
+
+For text,
+
+- Use expansion algorithm to identify areas of text
+- Discard the areas that do not have the right aspect ratio for text
+- Draw bounding boxes around the kept text area
+
+Then, 1D sliding window for character segmentation
+
+- Identify gaps between characters
+- Segment based on those gaps
+
+Finally, character recognition
+
+### Artificial data synthesis
+
+- Create data from scratch
+- Amplify a small training set
+
+For text OCR:
+
+- Take the computer's font library
+- Paste font characters on random background
+- Apply some filters - blur, contrast, etc
+
+![Examples of artificial data synthesis](assets/artificial-data-synthesis.png)
+
+For speech recogintion:
+
+- Original audio, labeled
+- Bad cellphone connection
+- Noisy background
+- Crowd
+- Machinery
+
+Amplifying the existing training set
+
+### Getting more data
+
+- Ideally use a low bias classifier with the artificially generated training set
+- "How much work would it be to get 10x more data?"
+    - Artificial data synthesis
+    - Collect/label manually
+    - Crowd source (Mechanical Turk)
+
+### Ceiling analysis
+
+Most valuable resource: Developer time
+
+> Pipeline: Image -> Text detection -> Character segmentation -> Character recognition. 
+
+What part of the pipeline is worth time to spend on improving?
+
+- Pick a metric to evaluate the quality of the system – eg. accuracy for OCR.
+- Evaluate accuracy of overall system
+- Stage by stage, assume 100% accuracy of the previous stage (giving 100% correct input), to get accuracy of the rest of the system
+
+Now know the upside potential of improving each of the components.
+
+## Summary
+
+- Supervised learning
+    - Linear regression, logistic regression, neural networks, SVMs
+    - For labeled data (x(i), y(i))
+- Unsupervised learning
+    - K-means clustering, PCA, Anomaly detection
+    - Unlabeled data
+- Special applications / topics
+    - Recommender systems, large scale machine learing, sliding windows
+- Advice on building a machine learning system
+    - Bias/variance, regularization; deciding what to work on next: evaluation of learning algorithms, learning curves, error analysis, ceiling analysis.
