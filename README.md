@@ -1,34 +1,31 @@
 # Adventures in Data Science
 
-> My adventures learning more data science and machine learning in particular.
+> My adventures learning more data science, and machine learning in particular.
 
 ## Things I want to learn
 
+- [X] Machine Learning theory
 - [ ] Applied Machine Learning with Python
 - [ ] Basics of Machine Learning with R
-- [ ] Neural networks theory
+- [X] Neural networks theory
 - [ ] Storytelling with data
-
-## Things I'm actually learning
-
 - [ ] [TensorFlow basics](tensorflow)
-  - [x] Getting Started
+  - [X] Getting Started
   - [ ] MNISFT For ML Beginners
-- [ ] [Coursera Machine Learning course](coursera_machinelearning)
-  - [x] Week 1
-  - [ ] Week 2
+- [X] [Coursera Machine Learning](coursera_machinelearning)
+
 
 ## Courses
 
-- https://www.coursera.org/learn/machine-learning
-- https://www.coursera.org/learn/ml-foundations
-- https://www.coursera.org/specializations/deep-learning
-- [Machine Learning Engineer Nanodegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009)
-- [Data Analyst Nanodegree](https://www.udacity.com/course/data-analyst-nanodegree--nd002)
-- [Machine Learning A-Z™: Hands-On Python & R In Data Science](https://www.udemy.com/machinelearning/)
-- [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/python-for-data-science-and-machine-learning-bootcamp/)
-- [Data Science and Machine Learning Bootcamp with R](https://www.udemy.com/data-science-and-machine-learning-bootcamp-with-r/)
-- [Deep Learning A-Z™: Hands-On Artificial Neural Networks](https://www.udemy.com/deeplearning/)
+- [X] [Coursera Machine Learning](https://www.coursera.org/learn/machine-learning)
+- [ ] https://www.coursera.org/learn/ml-foundations
+- [ ] https://www.coursera.org/specializations/deep-learning
+- [ ] [Machine Learning Engineer Nanodegree](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009)
+- [ ] [Data Analyst Nanodegree](https://www.udacity.com/course/data-analyst-nanodegree--nd002)
+- [ ] [Machine Learning A-Z™: Hands-On Python & R In Data Science](https://www.udemy.com/machinelearning/)
+- [ ] [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/python-for-data-science-and-machine-learning-bootcamp/)
+- [ ] [Data Science and Machine Learning Bootcamp with R](https://www.udemy.com/data-science-and-machine-learning-bootcamp-with-r/)
+- [ ] [Deep Learning A-Z™: Hands-On Artificial Neural Networks](https://www.udemy.com/deeplearning/)
 
 ## Resources
 
