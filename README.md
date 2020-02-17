@@ -46,3 +46,15 @@
 - https://hackernoon.com/minimalistic-learning-path-to-become-a-data-scientist-c0a4f614bd09
 - https://medium.com/@analytics/comprehensive-data-science-learning-path-for-2017-22ebd88f6d76
 - https://github.com/datasciencemasters/go
+
+### More resources
+
+- https://github.com/Avik-Jain/100-Days-Of-ML-Code
+- https://github.com/ethen8181/machine-learning
+- https://github.com/astorfi/TensorFlow-World
+- https://github.com/Spandan-Madan/DeepLearningProject
+- https://www.machinelearningisfun.com/
+- https://github.com/zotroneneis/machine_learning_basics
+- https://github.com/deepmipt/DeepPavlov
+- https://medium.com/@yegg/mental-models-i-find-repeatedly-useful-936f1cc405d
+- https://js.tensorflow.org/
